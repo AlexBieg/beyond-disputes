@@ -1,0 +1,111 @@
+@import "sass/variables.scss";
+body {
+    margin-top: $navbarHeight;
+    background-color: $backgroundColor;
+    font-family: 'Raleway', sans-serif;
+}
+.no-gutters {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    font-family: helvetica;
+    color: $greenColor;
+    font-weight: 100;
+    background-color: $navbarColor;
+    div {
+        margin: 0;
+        font-size: 3rem;
+        font-size: auto;
+        padding: 1.5rem;
+        min-height: $navbarHeight;
+        float: left;
+    }
+    .gray-text {
+        color: $grayColor;
+    }
+    .light-text {
+        text-transform: uppercase;
+    }
+    .phone-number {
+        float: right;
+        a {
+            color: inherit;
+        }
+    }
+}
+.header-container {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../img/home.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    position: relative;
+    .title {
+        color: $greenColor;
+    }
+    p {
+        font-size: 2rem;
+    }
+    .area {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        i {
+            animation-name: shrink;
+            animation-duration: 0.5s;
+        }
+        &:hover {
+            cursor: pointer;
+            i {
+                font-size: 5rem;
+                animation-name: grow;
+                animation-duration: 0.5s;
+            }
+        }
+    }
+    .small-hide {
+        display: none;
+        height: 100px;
+        position: absolute;
+        bottom: 140px;
+        left: 0;
+        .content {
+            background-color: rgba(0, 0, 0, 0.56);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+    }
+    @media (min-width: 992px) {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1) ), url("../img/home.jpg");
+        min-height: 800px;
+        .small-hide {
+            display: initial;
+        }
+    }
+}
+.mission-statement {
+    padding: 3rem;
+    font-size: 2rem;
+    h2 {
+        font-size: 4rem;
+    }
+}
+/*Animation*/
+@keyframes grow {
+    0% {
+        font-size: 4rem;
+    }
+    100% {
+        font-size: 5rem;
+    }
+}
+@keyframes shrink {
+    0% {
+        font-size: 5rem;
+    }
+    100% {
+        font-size: 4rem;
+    }
+}

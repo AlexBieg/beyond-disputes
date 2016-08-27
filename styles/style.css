@@ -1,0 +1,90 @@
+body {
+  margin-top: 7rem;
+  background-color: #d4d4d4;
+  font-family: 'Raleway', sans-serif; }
+
+.no-gutters {
+  margin: 0;
+  padding: 0; }
+
+nav {
+  font-family: helvetica;
+  color: #85c979;
+  font-weight: 100;
+  background-color: white; }
+  nav div {
+    margin: 0;
+    font-size: 3rem;
+    font-size: auto;
+    padding: 1.5rem;
+    min-height: 7rem;
+    float: left; }
+  nav .gray-text {
+    color: #7b8388; }
+  nav .light-text {
+    text-transform: uppercase; }
+  nav .phone-number {
+    float: right; }
+    nav .phone-number a {
+      color: inherit; }
+
+.header-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/home.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+  position: relative; }
+  .header-container .title {
+    color: #85c979; }
+  .header-container p {
+    font-size: 2rem; }
+  .header-container .area {
+    margin-top: 40px;
+    margin-bottom: 40px; }
+    .header-container .area i {
+      animation-name: shrink;
+      animation-duration: 0.5s; }
+    .header-container .area:hover {
+      cursor: pointer; }
+      .header-container .area:hover i {
+        font-size: 5rem;
+        animation-name: grow;
+        animation-duration: 0.5s; }
+  .header-container .small-hide {
+    display: none;
+    height: 100px;
+    position: absolute;
+    bottom: 140px;
+    left: 0; }
+    .header-container .small-hide .content {
+      background-color: rgba(0, 0, 0, 0.56);
+      border-radius: 10px;
+      padding: 1rem; }
+  @media (min-width: 992px) {
+    .header-container {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url("../img/home.jpg");
+      min-height: 800px; }
+      .header-container .small-hide {
+        display: initial; } }
+
+.mission-statement {
+  padding: 3rem;
+  font-size: 2rem; }
+  .mission-statement h2 {
+    font-size: 4rem; }
+
+/*Animation*/
+@keyframes grow {
+  0% {
+    font-size: 4rem; }
+  100% {
+    font-size: 5rem; } }
+
+@keyframes shrink {
+  0% {
+    font-size: 5rem; }
+  100% {
+    font-size: 4rem; } }
