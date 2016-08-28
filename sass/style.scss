@@ -1,6 +1,7 @@
 @import "sass/variables.scss";
 body {
     margin-top: $navbarHeight;
+    padding-bottom: 60px;
     background-color: $backgroundColor;
     font-family: 'Raleway', sans-serif;
 }
@@ -8,15 +9,17 @@ body {
     margin: 0;
     padding: 0;
 }
+h2 {
+    font-size: 4rem;
+}
 nav {
     font-family: helvetica;
     color: $greenColor;
     font-weight: 100;
+    font-size: 4rem;
     background-color: $navbarColor;
     div {
         margin: 0;
-        font-size: 3rem;
-        font-size: auto;
         padding: 1.5rem;
         min-height: $navbarHeight;
         float: left;
@@ -28,7 +31,7 @@ nav {
         text-transform: uppercase;
     }
     .phone-number {
-        float: right;
+        text-align: right;
         a {
             color: inherit;
         }
@@ -88,10 +91,22 @@ nav {
 .mission-statement {
     padding: 3rem;
     font-size: 2rem;
+}
+.map {
     h2 {
-        font-size: 4rem;
+        padding-left: 3rem;
+    }
+    #map {
+      width: 100%;
+      height: 400px;
+      background-color: grey;
     }
 }
+
+.contact-us {
+    margin: 3rem;
+}
+
 /*Animation*/
 @keyframes grow {
     0% {

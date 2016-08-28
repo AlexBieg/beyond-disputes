@@ -20,15 +20,39 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
+    <!-- Map -->
+    <script>
+      function initMap() {
+        var latLng = {lat: 47.61362, lng: -122.34360};
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: latLng,
+            zoom: 15,
+            draggable: false,
+            scrollwheel: false
+        });
+        var marker = new google.maps.Marker({
+          position: latLng,
+          map: map,
+          title: 'Beyond Disputes Law Group'
+        });
+        marker.addListener('click', function() {
+            window.open('https://www.google.com/maps/place/Beyond+Disputes+Law+Group/@47.6136199,-122.343604,15z/data=!4m5!3m4!1s0x0:0x2a041eb3fef83fea!8m2!3d47.6136199!4d-122.343604');
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOZnU7hYq5vhSbJW9JOT6Y0fvNUsMYusA&callback=initMap"
+      async defer>
+    </script>
+
     <link rel="stylesheet" href="styles/style.css" />
 </head>
-
 <body>
     <nav class="navbar navbar-fixed-top">
-        <div>
+        <div class="col-sm-8">
             <span class="gray-text">beyond </span>disputes <span class="light-text">Law Group</span>
         </div>
-        <div class="phone-number">
+        <div class="phone-number col-sm-4">
             <a href="tel:206-718-3445">206-718-3445</a>
         </div>
     </nav>
@@ -81,6 +105,18 @@
             We at Beyond Disputes have team of collaborative professionals working together to create responsive legal practice. Our first commitment is to be in service. We believe that communication and information exchange can make all the difference. This perspective
             guides us in the approach we take to conflict resolution and we pride ourselves on creating win-win outcomes.
         </p>
+    </div>
+    <div class="map">
+        <h2>Where To Find Us</h2>
+        <div id="map">
+
+        </div>
+    </div>
+    <div class="contact-us">
+        <h2>Contact Us</h2>
+        <form>
+            <input class="form-control" type="text" placeholder="Email" />
+        </form>
     </div>
 </body>
 
