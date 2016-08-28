@@ -1,42 +1,51 @@
 @import "sass/variables.scss";
+
 body {
     margin-top: $navbarHeight;
     padding-bottom: 60px;
     background-color: $backgroundColor;
     font-family: 'Raleway', sans-serif;
 }
+
 .no-gutters {
     margin: 0;
     padding: 0;
 }
+
 h2 {
     font-size: 4rem;
 }
+
 nav {
     font-family: helvetica;
     color: $greenColor;
     font-weight: 100;
     font-size: 4rem;
     background-color: $navbarColor;
+
     div {
         margin: 0;
         padding: 1.5rem;
         min-height: $navbarHeight;
-        float: left;
     }
+
     .gray-text {
         color: $grayColor;
     }
+
     .light-text {
         text-transform: uppercase;
     }
+
     .phone-number {
         text-align: right;
+
         a {
             color: inherit;
         }
     }
 }
+
 .header-container {
     background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../img/home.jpg");
     background-size: cover;
@@ -46,21 +55,27 @@ nav {
     font-size: 4rem;
     color: white;
     position: relative;
+
     .title {
         color: $greenColor;
     }
+
     p {
         font-size: 2rem;
     }
+
     .area {
         margin-top: 40px;
         margin-bottom: 40px;
+
         i {
             animation-name: shrink;
             animation-duration: 0.5s;
         }
+
         &:hover {
             cursor: pointer;
+
             i {
                 font-size: 5rem;
                 animation-name: grow;
@@ -68,12 +83,14 @@ nav {
             }
         }
     }
+
     .small-hide {
         display: none;
         height: 100px;
         position: absolute;
         bottom: 140px;
         left: 0;
+
         .content {
             background-color: rgba(0, 0, 0, 0.56);
             border-radius: 10px;
@@ -83,35 +100,39 @@ nav {
     @media (min-width: 992px) {
         background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1) ), url("../img/home.jpg");
         min-height: 800px;
+
         .small-hide {
             display: initial;
         }
     }
 }
+
 .mission-statement {
     padding: 3rem;
     font-size: 2rem;
 }
+
 .map {
     h2 {
         padding-left: 3rem;
     }
+
     #map {
-      width: 100%;
-      height: 400px;
-      background-color: grey;
+        width: 100%;
+        height: 400px;
+        background-color: grey;
     }
 }
 
 .contact-us {
     margin: 3rem;
 }
-
 /*Animation*/
 @keyframes grow {
     0% {
         font-size: 4rem;
     }
+
     100% {
         font-size: 5rem;
     }
@@ -120,6 +141,7 @@ nav {
     0% {
         font-size: 5rem;
     }
+
     100% {
         font-size: 4rem;
     }

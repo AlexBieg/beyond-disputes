@@ -20,8 +20,7 @@ nav {
   nav div {
     margin: 0;
     padding: 1.5rem;
-    min-height: 7rem;
-    float: left; }
+    min-height: 7rem; }
   nav .gray-text {
     color: #7b8388; }
   nav .light-text {
